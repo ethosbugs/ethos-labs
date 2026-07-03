@@ -63,7 +63,9 @@
             border-radius: 12px;
             padding: 30px;
             margin-bottom: 30px;
-            display: table;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
             width: 100%;
             transition: transform 0.2s, border-color 0.2s;
         }
@@ -73,10 +75,7 @@
         }
 
         .project-logo-cell {
-            display: table-cell;
-            vertical-align: top;
-            width: 120px;
-            padding-right: 25px;
+            flex: 0 0 100px;
         }
 
         .project-logo {
@@ -87,11 +86,12 @@
             background-color: #0d0f12;
             padding: 8px;
             border: 1px solid #222930;
+            display: block;
         }
 
         .project-content-cell {
-            display: table-cell;
-            vertical-align: top;
+            flex: 1 1 300px;
+            min-width: 0;
         }
 
         .project-title {
@@ -138,12 +138,21 @@
             border-top: 1px solid #14181c;
             margin-top: 60px;
         }
+
+        @media (max-width: 500px) {
+            .project-card {
+                display: block;
+            }
+            .project-logo-cell {
+                margin-bottom: 15px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="assets/ethos-labs.png" alt="Ethos Labs Logo" class="main-logo">
+        <img src="/assets/ethos-labs.png" alt="Ethos Labs Logo" class="main-logo">
         <h1>Ethos Labs</h1>
         <p class="subtitle">Ecosistema y recopilación de plataformas, aplicaciones y proyectos web desarrollados por nuestra organización.</p>
     </header>
@@ -154,7 +163,7 @@
             <!-- Proyecto 1: Catalunyan Rage -->
             <div class="project-card">
                 <div class="project-logo-cell">
-                    <img src="assets/catalunyan-rage.png" alt="Catalunyan Rage Logo" class="project-logo">
+                    <img src="/assets/catalunyan-rage.png" alt="Catalunyan Rage Logo" class="project-logo">
                 </div>
                 <div class="project-content-cell">
                     <h2 class="project-title">Catalunyan Rage</h2>
@@ -167,7 +176,7 @@
             <!-- Proyecto 2: Ethos Player -->
             <div class="project-card">
                 <div class="project-logo-cell">
-                    <img src="assets/ethos-player.png" alt="Ethos Player Logo" class="project-logo">
+                    <img src="/assets/ethos-player.png" alt="Ethos Player Logo" class="project-logo">
                 </div>
                 <div class="project-content-cell">
                     <h2 class="project-title">Ethos Player</h2>
